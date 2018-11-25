@@ -1,19 +1,21 @@
 package lesson1.Competitors;
 
 public class Team {
-    String name;
-    public Competitor[] comp = new Competitor[4];
+    private String name;
+    private Competitor[] competitors;
 
-    public Team (String name, Human comp1, Human comp2, Cat comp3, Dog comp4 ){
+    public Team (String name, Competitor... competitors ){
         this.name = name;
-        comp[0] = comp1;
-        comp[1] = comp2;
-        comp[2] = comp3;
-        comp[3] = comp4;
+        this.competitors = competitors;
+    }
+
+    public Competitor[] getCompetitors() {
+        return competitors;
     }
 
     public void dealWithObstacle(){
-        for (Competitor c: comp) {
+        System.out.println("Team: " + name);
+        for (Competitor c: competitors) {
             if (c.isOnDistance() == true) {
                 c.showResult();
             }
@@ -21,7 +23,7 @@ public class Team {
 
     }
     public void infoTeamMembers() {
-        for (Competitor c: comp) {
+        for (Competitor c: competitors) {
             c.showResult();
         }
     }
