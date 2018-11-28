@@ -5,7 +5,7 @@ import java.util.*;
 public class MainClass {
     public static void main(String[] args) {
         System.out.println("-------------------------------------------");
-        System.out.println("Задание №1: ");
+        System.out.println("Задание №1 - Массив с дублями слов: ");
         System.out.println("-------------------------------------------");
         ArrayList<String> arr = new ArrayList<>();
         arr.add("Orange");

@@ -11,7 +11,7 @@ public class PhoneBook {
     }
 
     public void get(String lastName) {
-        System.out.println("Телефонные номера " + lastName + ":");
+        System.out.println("Телефонные номера " + lastName + ": ");
         for (Map.Entry<String, String> o: this.pb.entrySet()) {
             if (o.getValue() == lastName) {
                 System.out.println(o.getKey());
